@@ -1,0 +1,37 @@
+version: '3.6'
+services:
+    front:
+      image: nginx:latest
+      container_name: HayIoT-Front
+      ports:
+        - "80:80"
+      volumes:
+        - /home/administrator/HayIoT/HayIoT-Dashboard/dist/coreui-free-angular-admin-template:/usr/share/nginx/html
+        - /home/administrator/HayIoT/nginx.conf:/etc/nginx/nginx.conf
+    api:
+      build: ./HayIoT-API
+      ports:
+          - "8000:8000"
+    mongodb:
+        container_name: HayIoT-mongodb
+        image: mongo:latest
+        ports:
+            - "27017:27017"
+        volumes:
+            - ./databases-init/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+            -  /db_backup/mongodb:/data/db
+
+    postgres:
+        container_name: HayIoT-postgres
+        image: postgres
+        restart: always
+        environment:
+            - POSTGRES_USER=administrator
+            - POSTGRES_PASSWORD=root1234
+            - POSTGRES_DB=HayIoT
+
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./databases-init/docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+            -  /db_backup/postgres:/var/lib/postgresql/data
