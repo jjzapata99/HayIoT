@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS public.value
 (
     val_id serial NOT NULL,
     val_name text NOT NULL,
-    PRIMARY KEY (val_id),
+    PRIMARY KEY (val_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.sensor_tag
