@@ -41,7 +41,6 @@ CREATE TABLE IF NOT EXISTS public.tag
 (
     tag_id serial NOT NULL,
     tag_name text NOT NULL,
-    sensor_id text NOT NULL,
     PRIMARY KEY (tag_id)
 );
 CREATE TABLE IF NOT EXISTS public.value
@@ -89,74 +88,70 @@ CREATE TABLE IF NOT EXISTS public.tag_val
 
 INSERT INTO site (id, site) VALUES ('11C', 'Laboratorios Fiec');
 INSERT INTO equip (id, siteRef, equip) VALUES ('LT1','11C','Papaya');
-
-
-
-
-INSERT INTO tags (tag_name) VALUES ('ac-freq');
-INSERT INTO tags (tag_name) VALUES ('active-energy');
-INSERT INTO tags (tag_name) VALUES ('active-power');
-INSERT INTO tags (tag_name) VALUES ('air-temp');
-INSERT INTO tags (tag_name) VALUES ('air-velocity');
-INSERT INTO tags (tag_name) VALUES ('apparent-power');
-INSERT INTO tags (tag_name) VALUES ('area');
-INSERT INTO tags (tag_name) VALUES ('atmospheric-pressure');
-INSERT INTO tags (tag_name) VALUES ('ch2o-concentration');
-INSERT INTO tags (tag_name) VALUES ('ch4-emission');
-INSERT INTO tags (tag_name) VALUES ('cloudage');
-INSERT INTO tags (tag_name) VALUES ('co-concentration');
-INSERT INTO tags (tag_name) VALUES ('co2-concentration');
-INSERT INTO tags (tag_name) VALUES ('co2-emission');
-INSERT INTO tags (tag_name) VALUES ('coolingCapacity');
-INSERT INTO tags (tag_name) VALUES ('current-angle');
-INSERT INTO tags (tag_name) VALUES ('current-imbalance');
-INSERT INTO tags (tag_name) VALUES ('current-magnitude');
-INSERT INTO tags (tag_name) VALUES ('current-thd');
-INSERT INTO tags (tag_name) VALUES ('dewPoint');
-INSERT INTO tags (tag_name) VALUES ('direction');
-INSERT INTO tags (tag_name) VALUES ('elec-demand');
-INSERT INTO tags (tag_name) VALUES ('elec-energy');
-INSERT INTO tags (tag_name) VALUES ('elec-power');
-INSERT INTO tags (tag_name) VALUES ('enthalpy');
-INSERT INTO tags (tag_name) VALUES ('feelsLike');
-INSERT INTO tags (tag_name) VALUES ('flow');
-INSERT INTO tags (tag_name) VALUES ('freq');
-INSERT INTO tags (tag_name) VALUES ('hfc-emission');
-INSERT INTO tags (tag_name) VALUES ('humidity');
-INSERT INTO tags (tag_name) VALUES ('illuminance');
-INSERT INTO tags (tag_name) VALUES ('level');
-INSERT INTO tags (tag_name) VALUES ('light-level');
-INSERT INTO tags (tag_name) VALUES ('luminance');
-INSERT INTO tags (tag_name) VALUES ('luminous-flux');
-INSERT INTO tags (tag_name) VALUES ('luminous-intensity');
-INSERT INTO tags (tag_name) VALUES ('n2o-emission');
-INSERT INTO tags (tag_name) VALUES ('nf3-emission');
-INSERT INTO tags (tag_name) VALUES ('nh3-concentration');
-INSERT INTO tags (tag_name) VALUES ('no2-concentration');
-INSERT INTO tags (tag_name) VALUES ('o3-concentration');
-INSERT INTO tags (tag_name) VALUES ('pf');
-INSERT INTO tags (tag_name) VALUES ('pfc-emission');
-INSERT INTO tags (tag_name) VALUES ('pm01-concentration');
-INSERT INTO tags (tag_name) VALUES ('pm10-concentration');
-INSERT INTO tags (tag_name) VALUES ('pm25-concentration');
-INSERT INTO tags (tag_name) VALUES ('precipitation');
-INSERT INTO tags (tag_name) VALUES ('pressure');
-INSERT INTO tags (tag_name) VALUES ('reactive-power');
-INSERT INTO tags (tag_name) VALUES ('sf6-emission');
-INSERT INTO tags (tag_name) VALUES ('solar-irradiance');
-INSERT INTO tags (tag_name) VALUES ('speed');
-INSERT INTO tags (tag_name) VALUES ('temp');
-INSERT INTO tags (tag_name) VALUES ('tvoc-concentration');
-INSERT INTO tags (tag_name) VALUES ('vfd-freq');
-INSERT INTO tags (tag_name) VALUES ('vfd-speed');
-INSERT INTO tags (tag_name) VALUES ('visibility');
-INSERT INTO tags (tag_name) VALUES ('volt-angle');
-INSERT INTO tags (tag_name) VALUES ('volt-imbalance');
-INSERT INTO tags (tag_name) VALUES ('volt-magnitude');
-INSERT INTO tags (tag_name) VALUES ('volume');
-INSERT INTO tags (tag_name) VALUES ('wetBulb');
-INSERT INTO tags (tag_name) VALUES ('wind-direction');
-INSERT INTO tags (tag_name) VALUES ('wind-speed');
+INSERT INTO tag (tag_name) VALUES ('ac-freq');
+INSERT INTO tag (tag_name) VALUES ('active-energy');
+INSERT INTO tag (tag_name) VALUES ('active-power');
+INSERT INTO tag (tag_name) VALUES ('air-temp');
+INSERT INTO tag (tag_name) VALUES ('air-velocity');
+INSERT INTO tag (tag_name) VALUES ('apparent-power');
+INSERT INTO tag (tag_name) VALUES ('area');
+INSERT INTO tag (tag_name) VALUES ('atmospheric-pressure');
+INSERT INTO tag (tag_name) VALUES ('ch2o-concentration');
+INSERT INTO tag (tag_name) VALUES ('ch4-emission');
+INSERT INTO tag (tag_name) VALUES ('cloudage');
+INSERT INTO tag (tag_name) VALUES ('co-concentration');
+INSERT INTO tag (tag_name) VALUES ('co2-concentration');
+INSERT INTO tag (tag_name) VALUES ('co2-emission');
+INSERT INTO tag (tag_name) VALUES ('coolingCapacity');
+INSERT INTO tag (tag_name) VALUES ('current-angle');
+INSERT INTO tag (tag_name) VALUES ('current-imbalance');
+INSERT INTO tag (tag_name) VALUES ('current-magnitude');
+INSERT INTO tag (tag_name) VALUES ('current-thd');
+INSERT INTO tag (tag_name) VALUES ('dewPoint');
+INSERT INTO tag (tag_name) VALUES ('direction');
+INSERT INTO tag (tag_name) VALUES ('elec-demand');
+INSERT INTO tag (tag_name) VALUES ('elec-energy');
+INSERT INTO tag (tag_name) VALUES ('elec-power');
+INSERT INTO tag (tag_name) VALUES ('enthalpy');
+INSERT INTO tag (tag_name) VALUES ('feelsLike');
+INSERT INTO tag (tag_name) VALUES ('flow');
+INSERT INTO tag (tag_name) VALUES ('freq');
+INSERT INTO tag (tag_name) VALUES ('hfc-emission');
+INSERT INTO tag (tag_name) VALUES ('humidity');
+INSERT INTO tag (tag_name) VALUES ('illuminance');
+INSERT INTO tag (tag_name) VALUES ('level');
+INSERT INTO tag (tag_name) VALUES ('light-level');
+INSERT INTO tag (tag_name) VALUES ('luminance');
+INSERT INTO tag (tag_name) VALUES ('luminous-flux');
+INSERT INTO tag (tag_name) VALUES ('luminous-intensity');
+INSERT INTO tag (tag_name) VALUES ('n2o-emission');
+INSERT INTO tag (tag_name) VALUES ('nf3-emission');
+INSERT INTO tag (tag_name) VALUES ('nh3-concentration');
+INSERT INTO tag (tag_name) VALUES ('no2-concentration');
+INSERT INTO tag (tag_name) VALUES ('o3-concentration');
+INSERT INTO tag (tag_name) VALUES ('pf');
+INSERT INTO tag (tag_name) VALUES ('pfc-emission');
+INSERT INTO tag (tag_name) VALUES ('pm01-concentration');
+INSERT INTO tag (tag_name) VALUES ('pm10-concentration');
+INSERT INTO tag (tag_name) VALUES ('pm25-concentration');
+INSERT INTO tag (tag_name) VALUES ('precipitation');
+INSERT INTO tag (tag_name) VALUES ('pressure');
+INSERT INTO tag (tag_name) VALUES ('reactive-power');
+INSERT INTO tag (tag_name) VALUES ('sf6-emission');
+INSERT INTO tag (tag_name) VALUES ('solar-irradiance');
+INSERT INTO tag (tag_name) VALUES ('speed');
+INSERT INTO tag (tag_name) VALUES ('temp');
+INSERT INTO tag (tag_name) VALUES ('tvoc-concentration');
+INSERT INTO tag (tag_name) VALUES ('vfd-freq');
+INSERT INTO tag (tag_name) VALUES ('vfd-speed');
+INSERT INTO tag (tag_name) VALUES ('visibility');
+INSERT INTO tag (tag_name) VALUES ('volt-angle');
+INSERT INTO tag (tag_name) VALUES ('volt-imbalance');
+INSERT INTO tag (tag_name) VALUES ('volt-magnitude');
+INSERT INTO tag (tag_name) VALUES ('volume');
+INSERT INTO tag (tag_name) VALUES ('wetBulb');
+INSERT INTO tag (tag_name) VALUES ('wind-direction');
+INSERT INTO tag (tag_name) VALUES ('wind-speed');
 
 INSERT INTO value (val_name) VALUES ('m³/s');
 INSERT INTO value (val_name) VALUES ('lb');
