@@ -37,6 +37,20 @@ CREATE TABLE IF NOT EXISTS public.sensor
         ON DELETE NO ACTION
         NOT VALID
 );
+CREATE TABLE IF NOT EXISTS public.tag
+(
+    tag_id serial NOT NULL,
+    tag_name text NOT NULL,
+    sensor_id text NOT NULL,
+    PRIMARY KEY (tag_id)
+);
+CREATE TABLE IF NOT EXISTS public.value
+(
+    val_id serial NOT NULL,
+    val_name text NOT NULL,
+    PRIMARY KEY (val_id),
+);
+
 CREATE TABLE IF NOT EXISTS public.sensor_tag
 (
     id serial NOT NULL,
@@ -70,19 +84,6 @@ CREATE TABLE IF NOT EXISTS public.tag_val
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
-);
-CREATE TABLE IF NOT EXISTS public.tag
-(
-    tag_id serial NOT NULL,
-    tag_name text NOT NULL,
-    sensor_id text NOT NULL,
-    PRIMARY KEY (tag_id)
-);
-CREATE TABLE IF NOT EXISTS public.value
-(
-    val_id serial NOT NULL,
-    val_name text NOT NULL,
-    PRIMARY KEY (val_id),
 );
 
 
